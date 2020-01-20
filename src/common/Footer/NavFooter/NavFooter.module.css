@@ -1,0 +1,22 @@
+.nav {
+  flex: 0 0 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 24px;
+  color: #575756;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.navItem ul li a,
+.navItem ul li span {
+  color: #575756;
+}
+
+.navItem ul li a:hover,
+.navItem ul li span:hover {
+  color: #fff;
+}

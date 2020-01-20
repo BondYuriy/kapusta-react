@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Avant', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #575756;
+  min-height: 100vh;
+}
+
+#root {
+  display: block;
+  min-height: 100vh;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.link-promocode {
+  display: inline-block;
+  /* color: $red-color !important; */
+  font-size: 13px;
+  /* font-weight: $Bold; */
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+
+  /* &:hover {
+    color: $black-color !important;
+  } */
+}
+
+.title-section {
+  padding: 30px 0 15px 0;
+}
+
+.title-section,
+.title-section a {
+  display: block;
+  /* color: $green-color;
+  font-size: 29px;
+  font-weight: $Bold; */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-wrapper {
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: 'Avant';
+  src: url('./fonts/AvantGardeGothicC-Book.woff2') format('woff2'),
+    url('./fonts/AvantGardeGothicC-Book.woff') format('woff'),
+    url('./fonts/AvantGardeGothicC-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avant';
+  src: url('./fonts/AvantGardeGothicC-Demi.woff2') format('woff2'),
+    url('./fonts/AvantGardeGothicC-Demi.woff') format('woff'),
+    url('./fonts/AvantGardeGothicC-Demi.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./fonts/Intro.woff2') format('woff2'),
+    url('./fonts/Intro.woff') format('woff'),
+    url('./fonts/Intro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeliosCond';
+  src: url('./fonts/HeliosCond.woff2') format('woff2'),
+    url('./fonts/HeliosCond.woff') format('woff'),
+    url('./fonts/HeliosCond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

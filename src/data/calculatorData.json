@@ -1,0 +1,16 @@
+{
+  "sliderAmount": {
+    "amount": "Сума",
+    "currency": "грн"
+  },
+  "sliderDay": {
+    "term": "Строк",
+    "day": "днів"
+  },
+  "result": {
+    "amount": "Сума погашення",
+    "date": "Дата погашення"
+  },
+  "promocode": "я маю промокод",
+  "button": "оформити кредит"
+}

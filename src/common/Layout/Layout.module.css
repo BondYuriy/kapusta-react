@@ -1,0 +1,14 @@
+.layout {
+  padding-top: 210px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 210px);
+}
+
+.layout main {
+  flex-grow: 1;
+}
+
+.layout footer {
+  flex-grow: 0;
+}

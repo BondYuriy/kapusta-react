@@ -1,0 +1,8 @@
+.calculatorBox {
+  height: 1080px;
+  overflow: hidden;
+  background-image: url('./image/Layer_3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
