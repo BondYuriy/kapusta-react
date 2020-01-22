@@ -10,7 +10,7 @@ const NavHeader = () => (
       <h3 className={styles.title}>{footerData.title.about}</h3>
       <ul>
         <li>
-          <NavLink to={routes.ABOUT.path} activeStyle={{ color: '#367a36' }}>
+          <NavLink to={routes.ABOUT.path} activeStyle={{ color: '#ffffff' }}>
             {footerData.navigation.about}
           </NavLink>
         </li>
@@ -23,20 +23,20 @@ const NavHeader = () => (
           <NavLink
             exact
             to={routes.PROCESSING.path}
-            activeStyle={{ color: '#367a36' }}
+            activeStyle={{ color: '#ffffff' }}
           >
             {footerData.navigation.processing}
           </NavLink>
         </li>
         <li>
-          <NavLink to={routes.PAY.path} activeStyle={{ color: '#367a36' }}>
+          <NavLink to={routes.PAY.path} activeStyle={{ color: '#ffffff' }}>
             {footerData.navigation.pay}
           </NavLink>
         </li>
         <li>
           <NavLink
             to={routes.QUESTIONS.path}
-            activeStyle={{ color: '#367a36' }}
+            activeStyle={{ color: '#ffffff' }}
           >
             {footerData.navigation.questions}
           </NavLink>

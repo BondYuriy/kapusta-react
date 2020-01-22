@@ -24,6 +24,7 @@
     "flow": "flow",
     "postinstall": "flow-typed install"
   },
+  "homepage": "http://kapusta.bondar.space",
   "eslintConfig": {
     "extends": "react-app"
   },

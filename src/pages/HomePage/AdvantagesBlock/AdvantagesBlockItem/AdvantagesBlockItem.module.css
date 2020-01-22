@@ -1,0 +1,23 @@
+.item {
+  flex: 0 0 18%;
+}
+
+.imgBox {
+  margin-bottom: 20px;
+}
+
+.title {
+  display: block;
+  color: #3c3c3b;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+
+.text {
+  display: block;
+  color: #3c3c3b;
+  font-size: 18px;
+  line-height: 20px;
+}

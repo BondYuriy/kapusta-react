@@ -1,0 +1,40 @@
+.item {
+  flex: 0 0 31%;
+}
+
+.imgBox {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.imgBox::after {
+  display: block;
+  content: '';
+  width: 35px;
+  height: 20px;
+  background-image: url('../../../image/arrow.png');
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.item:last-child .imgBox::after {
+  display: none;
+}
+
+.title {
+  display: block;
+  color: #3c3c3b;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+
+.text {
+  display: block;
+  color: #3c3c3b;
+  font-size: 18px;
+  line-height: 20px;
+}
