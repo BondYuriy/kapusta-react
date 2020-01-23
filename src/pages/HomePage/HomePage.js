@@ -6,6 +6,7 @@ import AdvantagesBlock from './AdvantagesBlock/AdvantagesBlock';
 import ProcessingBlock from './ProcessingBlock/ProcessingBlock';
 import RequirementsBlock from './RequirementsBlock/RequirementsBlock';
 import PayBlock from './PayBlock/PayBlock';
+
 import styles from './HomePages.module.css';
 
 const HomePages = () => (

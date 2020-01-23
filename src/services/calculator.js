@@ -16,8 +16,6 @@ const creditRate = 1.75;
 let creditRatePromocode = 1;
 let isValidPromocode = false;
 
-getPrice();
-
 userPromocodeBtn.addEventListener('click', getPromocode);
 btnPromocodeModalClose.addEventListener('click', cleansPromocodeModal);
 
@@ -40,15 +38,6 @@ function getPromocode(e) {
   setTimeout(function() {
     cleansPromocodeModal();
   }, 2000);
-}
-
-function isValidPromocodeInput() {
-  let n = /^[a-zA-Z0-9]{4,25}\b/;
-  if (userPromocodeInput.value.search(n) == 0) {
-    getDataPromocode();
-  } else {
-    isValidPromocode = false;
-  }
 }
 
 function cleansPromocodeModal() {

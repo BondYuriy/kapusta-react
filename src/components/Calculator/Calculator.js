@@ -4,6 +4,7 @@ import routes from '../../routes';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
+import Modal from '../../components/Modal/Modal';
 import getDate from '../../services/getDate';
 import getTotalMoney from '../../services/getTotalMoney';
 
@@ -52,6 +53,13 @@ export default function InputSlider() {
 
   const [isValidPromo, setIsValidPromo] = useState(false);
   const [betPromo, setBetPromo] = useState(1);
+
+  const getIsValidPromo = isValidData => {
+    console.log(isValidData);
+    if (isValidData) {
+      setIsValidPromo(true);
+    }
+  };
 
   /* Total money */
 
@@ -117,13 +125,13 @@ export default function InputSlider() {
         />
         <span>днів</span>
       </div>
-      <span>я маю промокод</span>
+      <Modal getIsValidPromo={getIsValidPromo} />
       <div>
         <span>Сума погашення</span>
         {isValidPromo && (
           <span>{getTotalMoney(money, day, bet, isValidPromo, betPromo)}</span>
         )}
-        <span>{getTotalMoney(money, day, bet, isValidPromo, betPromo)}</span>
+        <span>{getTotalMoney(money, day, bet, false, betPromo)}</span>
       </div>
       <div>
         <span>Дата погашення</span>
