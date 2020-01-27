@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import isValidInputPromo from '../../services/isValidInputPromo';
+import styles from './PromotionalForm.module.css';
 
 export default function PromotionalForm({ getIsValidPromo, closeModal }) {
   const [input, setInput] = useState('');
@@ -48,20 +49,28 @@ export default function PromotionalForm({ getIsValidPromo, closeModal }) {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      {promoData && <span>Ваш код успішно прийнятий</span>}
-      <input
-        type="text"
-        autoComplete="off"
-        required
-        name="promo"
-        value={input}
-        onChange={handleChange}
-      />
-      {notValid && <span>Введіть дані в правильному форматі</span>}
-      <button type="submit">
-        <span>Перевірити код</span>
-      </button>
-    </form>
+    <div className={styles.content}>
+      <div className={styles.header}>
+        <h5 className={styles.title}>Промокод</h5>
+        <button className={styles.btn} type="button" onClick={closeModal}>
+          X
+        </button>
+      </div>
+      <form onSubmit={submitForm}>
+        {promoData && <span>Ваш код успішно прийнятий</span>}
+        <input
+          type="text"
+          autoComplete="off"
+          required
+          name="promo"
+          value={input}
+          onChange={handleChange}
+        />
+        {notValid && <span>Введіть дані в правильному форматі</span>}
+        <button type="submit">
+          <span>Перевірити код</span>
+        </button>
+      </form>
+    </div>
   );
 }

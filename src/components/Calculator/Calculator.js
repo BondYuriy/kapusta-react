@@ -7,6 +7,7 @@ import Input from '@material-ui/core/Input';
 import Modal from '../../components/Modal/Modal';
 import getDate from '../../services/getDate';
 import getTotalMoney from '../../services/getTotalMoney';
+import styles from './Calculator.module.css';
 
 export default function InputSlider() {
   /* InputSlider money */
@@ -66,80 +67,93 @@ export default function InputSlider() {
   const [bet, setBet] = useState(1.75);
 
   return (
-    <>
-      <div className="box">
+    <div className={styles.calculator}>
+      <div className={styles.moneyBox}>
         <Typography id="input-slider-money" gutterBottom>
           Сума
         </Typography>
-
-        <Slider
-          value={typeof money === 'number' ? money : 0}
-          onChange={handleSliderMoneyChange}
-          aria-labelledby="input-slider-money"
-          step={50}
-          min={1000}
-          max={5000}
-        />
-        <Input
-          className="input"
-          value={money}
-          margin="dense"
-          onChange={handleInputMoneyChange}
-          onBlur={handleBlurMoney}
-          inputProps={{
-            step: 50,
-            min: 1000,
-            max: 5000,
-            type: 'number',
-            'aria-labelledby': 'input-slider-money',
-          }}
-        />
-        <span>грн</span>
+        <div className={styles.slider}>
+          <Slider
+            value={typeof money === 'number' ? money : 0}
+            onChange={handleSliderMoneyChange}
+            aria-labelledby="input-slider-money"
+            step={50}
+            min={1000}
+            max={5000}
+          />
+          <Input
+            className="input"
+            value={money}
+            margin="dense"
+            onChange={handleInputMoneyChange}
+            onBlur={handleBlurMoney}
+            inputProps={{
+              step: 50,
+              min: 1000,
+              max: 5000,
+              type: 'number',
+              'aria-labelledby': 'input-slider-money',
+            }}
+          />
+        </div>
+        <span className={styles.unit}>грн</span>
       </div>
-      <div className="box">
+      <div className={styles.dayBox}>
         <Typography id="input-slider-day" gutterBottom>
           Строк
         </Typography>
-
-        <Slider
-          value={typeof day === 'number' ? day : 0}
-          onChange={handleSliderDayChange}
-          aria-labelledby="input-slider-day"
-          step={1}
-          min={3}
-          max={30}
-        />
-        <Input
-          className="input"
-          value={day}
-          margin="dense"
-          onChange={handleInputDayChange}
-          onBlur={handleBlurDay}
-          inputProps={{
-            step: 1,
-            min: 3,
-            max: 30,
-            type: 'number',
-            'aria-labelledby': 'input-slider-day',
-          }}
-        />
-        <span>днів</span>
+        <div className={styles.slider}>
+          <Slider
+            value={typeof day === 'number' ? day : 0}
+            onChange={handleSliderDayChange}
+            aria-labelledby="input-slider-day"
+            step={1}
+            min={3}
+            max={30}
+          />
+          <Input
+            className="input"
+            value={day}
+            margin="dense"
+            onChange={handleInputDayChange}
+            onBlur={handleBlurDay}
+            inputProps={{
+              step: 1,
+              min: 3,
+              max: 30,
+              type: 'number',
+              'aria-labelledby': 'input-slider-day',
+            }}
+          />
+        </div>
+        <span className={styles.unit}>днів</span>
       </div>
-      <Modal getIsValidPromo={getIsValidPromo} />
-      <div>
-        <span>Сума погашення</span>
-        {isValidPromo && (
-          <span>{getTotalMoney(money, day, bet, isValidPromo, betPromo)}</span>
-        )}
-        <span>{getTotalMoney(money, day, bet, false, betPromo)}</span>
+      <div className={styles.resultBox}>
+        <div className={styles.resultInfo}>
+          <div className={styles.resultMoney}>
+            <span className={styles.name}>Сума погашення</span>
+            <div className={styles.resultMoneyBox}>
+              <span className={styles.value}>
+                {getTotalMoney(money, day, bet, false, betPromo)}
+              </span>
+              {isValidPromo && (
+                <span className={styles.promoMoney}>
+                  {getTotalMoney(money, day, bet, isValidPromo, betPromo)}
+                </span>
+              )}
+              грн
+            </div>
+          </div>
+          <div className={styles.resultDay}>
+            <span className={styles.name}>Дата погашення</span>
+            <span className={styles.value}>{getDate(day)}</span>
+          </div>
+        </div>
+        <Modal getIsValidPromo={getIsValidPromo} />
+        <button className={styles.btn} type="button">
+          <Link to={routes.LOGIN.path}>оформити кредит</Link>
+        </button>
       </div>
-      <div>
-        <span>Дата погашення</span>
-        <span>{getDate(day)}</span>
-      </div>
-      <button type="submit">
-        <Link to={routes.LOGIN.path}>оформити кредит</Link>
-      </button>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,139 @@
+.calculator {
+  width: 80%;
+  margin: auto;
+  padding-top: 130px;
+}
+
+.moneyBox,
+.dayBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moneyBox {
+  margin-bottom: 60px;
+}
+
+.dayBox {
+  margin-bottom: 110px;
+}
+
+.resultBox {
+  width: 600px;
+  height: 180px;
+  border-radius: 60px;
+  box-shadow: 7px 7px 50px #010101;
+  background-color: rgba(255, 255, 255, 0.65);
+  position: relative;
+  margin: auto;
+}
+
+.moneyBox p,
+.dayBox p,
+.unit {
+  text-shadow: 6px 6px 25px #010101;
+  color: #fff;
+  font-family: 'Avant', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slider {
+  flex: 0 0 650px;
+  height: 112px;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 7px 7px 50px #010101;
+  /* line-height: 112px; */
+  /* margin: 0 20px; */
+  /* color: #e30613; */
+  /* font-size: 50px;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase; */
+  /* padding-right: 25px; */
+}
+
+.resultInfo {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 33px 0 0 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.resultMoney {
+  margin-bottom: 13px;
+}
+
+.resultMoney,
+.resultDay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  flex: 0 0 45%;
+  text-align: right;
+  color: #575756;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.resultMoneyBox,
+.value {
+  flex: 0 0 50%;
+  text-align: left;
+  color: #575756;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-right: 3px;
+}
+
+.promoMoney {
+  color: #289b38;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 3px 0 7px;
+}
+
+.btn {
+  border: 0;
+  padding: 0;
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 0 rgba(1, 1, 1, 0.45);
+  position: absolute;
+  right: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e30613;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0 rgba(1, 1, 1, 0.45);
+  right: -80px;
+  transform: translateY(-48%);
+}
+
+.btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* line-height: 300px; */
+  color: #fff;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
